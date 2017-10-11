@@ -1,15 +1,15 @@
 {
-  "name": "satelize",
+  "name": "satelize-lts",
   "description": "Get location details (latitude, longitude...) from IP visitor, server side NodeJS module",
-  "version": "0.2.0",
+  "version": "0.1.5",
   "author": {
-    "name": "Julien Valéry",
-    "email": "darul75@gmail.com"
+    "name": "Valeri Kuparashvili",
+    "email": "vatex.2000@gmail.com"
   },
-  "homepage": "https://github.com/darul75/satelize",
+  "homepage": "https://github.com/vatex/satelize",
   "repository": {
     "type": "git",
-    "url": "https://github.com/darul75/satelize.git"
+    "url": "https://github.com/vatex/satelize.git"
   },
   "keywords": [
     "ip",
@@ -35,7 +35,7 @@
     "mocha": "^2.3.4"
   },
   "bugs": {
-    "url": "https://github.com/darul75/satelize/issues"
+    "url": "https://github.com/vatex/satelize/issues"
   },
   "readmeFilename": "README.md",
   "license": "MIT"
