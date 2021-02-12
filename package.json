@@ -1,7 +1,7 @@
 {
   "name": "satelize-lts",
   "description": "Get location details (latitude, longitude...) from IP visitor, server side NodeJS module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Valeri Kuparashvili"
   },
@@ -19,10 +19,7 @@
     "telize"
   ],
   "main": "./src/satelize",
-  "scripts": {
-    "test": "mocha test/*.js"
-  },
   "dependencies": {
-    "maxmind-db-reader": "~0.2.1"
+    "maxmind-db-reader": "0.2.1"
   }
 }

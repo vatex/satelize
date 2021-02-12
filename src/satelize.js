@@ -6,7 +6,7 @@ function Satelize() {
 }
 
 Satelize.prototype.init = () => {
-    this.db = mmdbreader.openSync(path.join(__dirname,'/DB/GeoLite2-City.mmdb'));
+    this.db = mmdbreader.openSync(path.join(__dirname, '/DB/GeoLite2-City.mmdb'));
     this.initialized = true;
 };
 
@@ -16,24 +16,17 @@ Satelize.prototype.satelize = (options, next) => {
     }
 
     var data = this.db.getGeoDataSync(options.ip);
-    
-    if (data) {
-        if (!data.country) {
-            data.country = {
-                iso_code: null,
-                names: null
-            }
-        }
 
+    if (data) {
         return next(null, {
             ip: options.ip,
-            continent_code: data.continent.code,
-            continent: data.continent.names,
-            country_code: data.country.iso_code,
-            country: data.country.names,
-            latitude: data.location.latitude,
-            longitude: data.location.longitude,
-            timezone : data.location.time_zone
+            continent_code: (data.continent ? data.continent.code : null),
+            continent: (data.continent ? data.continent.names : null),
+            country_code: (data.country ? data.country.iso_code : null),
+            country: (data.country ? data.country.names : null),
+            latitude: (data.location ? data.location.latitude : null),
+            longitude: (data.location ? data.location.longitude : null),
+            timezone: (data.location ? data.location.time_zone : null)
         });
     }
 
